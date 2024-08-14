@@ -1,0 +1,18 @@
+Create React Project :
+----------------------
+
+    1. node -v
+
+    2. npm -v
+
+    3. npx create-react-app myapp
+
+    4. cd myapp
+
+    5. npm start
+
+        if have a problem. then run the below command - otherwise don't run the below command.
+
+    6. npm install ajv@latest ajv-keywords@latest
+
+    7. npm start
