@@ -16,3 +16,18 @@ Create React Project :
     6. npm install ajv@latest ajv-keywords@latest
 
     7. npm start
+
+Add Bootstrap :
+---------------
+
+    1. npm install bootstrap
+
+     and import :
+     ------------
+
+        1. import 'bootstrap/dist/css/bootstrap.min.css';
+        2. import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+            in index.js file
+
+

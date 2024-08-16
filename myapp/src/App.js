@@ -1,29 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-import Form from './forms/Form';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-
-      <nav className="navbar">
-        <div className="logo">MyLogo</div>
-        <div className="menu-icon">
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
+    <div className="container">
+      <div className="row">
+        <div className="col-sm-6">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">Special title treatment</h5>
+              <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" className="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
         </div>
-        <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <Form />
-
+        <div className="col-sm-6">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">Special title treatment</h5>
+              <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" className="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
