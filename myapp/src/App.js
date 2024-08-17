@@ -1,31 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
 
-import './App.css';
+import Navbar from './Navbar';
 
 function App() {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-sm-6">
-          <div className="card">
-            <div className="card-body">
-              <h5 className="card-title">Special title treatment</h5>
-              <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" className="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div className="col-sm-6">
-          <div className="card">
-            <div className="card-body">
-              <h5 className="card-title">Special title treatment</h5>
-              <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" className="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Router>
+    <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 
