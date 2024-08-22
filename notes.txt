@@ -35,3 +35,8 @@ Add Routes:
 
 npm install react-router-dom
 
+
+Add sweetalert2 Package:
+------------------------
+
+npm install sweetalert2

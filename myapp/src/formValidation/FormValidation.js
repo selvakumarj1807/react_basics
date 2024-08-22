@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './FormValidation.css';
 
+import Swal from 'sweetalert2'
+
 function FormValidation() {
     const [formData, setFormData] = useState({
         name: '',
@@ -21,6 +23,13 @@ function FormValidation() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        Swal.fire({
+            title: "Success!",
+            text: "Message sent Successfully!",
+            icon: "success"
+        });
+
         console.log(formData);
     };
 
