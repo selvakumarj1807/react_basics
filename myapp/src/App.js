@@ -6,6 +6,8 @@ import Contact from './Contact';
 
 import Navbar from './Navbar';
 
+import FormValidation from './formValidation/FormValidation';
+
 function App() {
   return (
     <Router>
@@ -14,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/FormValidation" element={<FormValidation />} />
       </Routes>
     </Router>
   );

@@ -30,4 +30,8 @@ Add Bootstrap :
 
             in index.js file
 
+Add Routes:
+-----------
+
+npm install react-router-dom
 

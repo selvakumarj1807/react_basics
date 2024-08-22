@@ -1,41 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css'; // Import the CSS file
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <nav style={styles.navbar}>
-      <div style={styles.logo}>
-        <Link to="/" style={styles.link}>MyWebsite</Link>
+    <nav className="navbar">
+      <div className="logo">
+        <Link to="/" className="link">MyWebsite</Link>
       </div>
-      <div style={styles.links}>
-        <Link to="/" style={styles.link}>Home</Link>
-        <Link to="/about" style={styles.link}>About</Link>
-        <Link to="/contact" style={styles.link}>Contact</Link>
+      <div className={`links ${isOpen ? 'open' : ''}`}>
+        <Link to="/" className="link">Home</Link>
+        <Link to="/about" className="link">About</Link>
+        <Link to="/contact" className="link">Contact</Link>
+        <Link to="/FormValidation" className="link">FormValidation</Link>
+      </div>
+      <div className="hamburger" onClick={toggleMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
       </div>
     </nav>
   );
 }
-
-const styles = {
-  navbar: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    backgroundColor: '#333',
-    padding: '1rem',
-  },
-  logo: {
-    fontSize: '1.5rem',
-  },
-  links: {
-    display: 'flex',
-    gap: '1rem',
-  },
-  link: {
-    color: 'white',
-    textDecoration: 'none',
-    padding: '0.5rem',
-  },
-};
 
 export default Navbar;
